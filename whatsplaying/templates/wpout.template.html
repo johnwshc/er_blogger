@@ -1,0 +1,83 @@
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 204);" alink="#000099" link="#000099" vlink="#990099">
+<br>
+<script src="http://player.radiocdn.com/iframe.js?hash=1b9f17aacc6739610d310410c5f0b5091047abfa-450-135"></script>
+<br>
+<h2 style="color: rgb(204, 0, 0);">
+<center>
+Currently Playing </center>
+</h2>
+<div style="text-align: center;"><br>
+</div><table style="width: 576px; height: 56px; text-align: left; margin-left: auto; margin-right: auto; background-color: white;" class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th style="text-align: center; background-color: white;">Title</th>
+<th style="background-color: white;">Time</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td style="background-color: white;">{{ data['currently_playing']['data'][0] }}</td>
+<td style="background-color: white;">{{ data['currently_playing']['data'][1] }}</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr>
+<br>
+<h2 style="color: rgb(204, 0, 0);">
+<center>
+Coming Up</center>
+</h2>
+<div style="text-align: center;"><br>
+</div><table style="width: 577px; height: 82px; text-align: left; margin-left: auto; margin-right: auto;" class="dataframe" border="1">
+<thead align="center">
+<tr>
+<th style="text-align: center; background-color: white;">Title</th>
+<th style="text-align: center; background-color: white;">Artist</th>
+</tr>
+</thead>
+<tbody>
+{% for item in data['coming_up']['data']   %}
+<tr align="center">
+
+
+
+<td style="text-align: center; background-color: white;">{{item[1]}}</td>
+<td style="text-align: center; background-color: white;">{{item[2]}}</td>
+</tr>
+{% endfor %}
+
+</tbody>
+</table>
+<br>
+<hr>
+<br>
+<h2 style="color: rgb(204, 0, 0);">
+<center>
+Previously Playing</center>
+</h2>
+<br>
+<table style="width: 585px; height: 160px; text-align: left; margin-left: auto; margin-right: auto; background-color: white;" class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th style="text-align: center;"><big><big></big></big>Recently Played</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody>
+{% for item in data['previously_played']['data']   %}
+<tr>
+
+
+<td style="text-align: center;">{{item[0]}}</td>
+<td>{{item[1]}}</td>
+</tr>
+{%  endfor %}
+
+</tbody>
+</table>
+<br>
+<br>
+</body>
