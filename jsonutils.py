@@ -42,39 +42,7 @@ class WPConfig:
         WPConfig.storage.put(credentials)
         
        
-#{'recovery_id' : '3260392681602305539',
-#        'radio_id' : '1966293608187192453',
-#        'radio_url' : 'http://www.enlightenradio.org',
-#        'radio_pod_id' : '7279974555523146286',
-#        'tales_id' : '238171273635559327',
-#        'soc_econ_id' : '5307075296669483402',
-#        'resistance_id' : '4625929664919937419',
-#        'poetry_id' : '8986792789719838466',
-#        'pnm_id' : '894702519709902274',
-#        'wp_page_id' : '8970717140175834303',
-#        'api_key': 'AIzaSyDW6XtkmrkjoKCEOTS5urpPIciJjV9hdJo',
-#        'auth_provider_x509_cert_url': 'https://www.googleapis.com/oauth2/v1/certs',
-#        'auth_uri': 'https://accounts.google.com/o/oauth2/auth',
-#        'client_id': '946832198726-eub0q1jk1b46emlsqdrbsj3aupsij1ue.apps.googleusercontent.com',
-#        'client_secret': 'kDiIp5JzdDVOeQrhdfGveiZ1',
-#        'project_id': 'bloggertools-170622',
-#        'redirect_uri': 'https://localhost:8080',
-#        'token_uri': 'https://accounts.google.com/o/oauth2/token',
-#        'scope' : 'https://www.googleapis.com/auth/blogger',
-#        'service':'blogger',
-#        'grant_type': 'client_credentials',
-#        'version':'v3',
-#        'DRAFT' : True,
-#        'userId':'112419394476427752442', #jcase
-#        'wp_id':'7576689809423182356',
-#        'DEBUG': True,
-#        'wp_log_head': WP_LOG_HEAD,
-#        'logname': r'..\blogger_logs\WPLogger.log',
-#        'src_file':r'\\EPIC1\playlists\now.playing.out.html',     
-#        'dest_file': "er.playing.out.html",
-#        'HTML_body_config':'body_config.json',
-#               
-#        }
+
         
  
    
@@ -90,44 +58,11 @@ class WPConfig:
           scope=self.ids['scope'])
         return (service,flags)
     
-    #how to authorize and http instance:
-    #   http = httplib2.Http()
-    #   http = credentials.authorize(http)
-        
-    #dictionary object conatining client secrets data: don't use
-    
-    csdict ={"client_id":"946832198726-eub0q1jk1b46emlsqdrbsj3aupsij1ue.apps.googleusercontent.com",
-    "project_id":"bloggertools-170622",
-    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
-    "token_uri":"https://accounts.google.com/o/oauth2/token",
-    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
-    "client_secret":"kDiIp5JzdDVOeQrhdfGveiZ1",
-    "rediret_uri":"https://localhost:8080"}
-    
-    #alternative method of getting google api credentials/token
-    
-    #def get_credentials():
-    #    
-    #    credentials = get_flow().run_local_server(host='localhost',
-    #        port=8080, 
-    #        authorization_prompt_message='Please visit this URL: {url}', 
-    #        success_message='The auth flow is complete; you may close this window.',
-    #        open_browser=True)
-    #    return credentials
-    
-    #def get_flow():
-    #    flow = flow_from_clientsecrets(CLIENT_SECRETS_FILE,
-    #                               scope='https://www.googleapis.com/auth/blogger',
-    #                               redirect_uri=ids['rediret_uri'])
-    #    return flow
     
     
-    ## Methods to load and manipulate an alt json cred file
-    #def loadOauthCreds(fname=CREDENTIALS_FILE):
-    #    with open(fname) as oauth_json:
-    #        d = json.load(oauth_json)
-    #        oauth_json.close()
-    #        return d
+   
+    
+    
     
     #methods to store an retrieve json and rotate body file
     def saveWPBodyToJson(dic):
